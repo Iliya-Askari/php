@@ -22,7 +22,7 @@
 	
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="img js-fullheight" style="background-image: url(images/bg.jpg);">
 
 <div>
 	<h2 align="center">Welcome Page</h2>
@@ -42,11 +42,14 @@
 
     <!-- logged in user information -->
     <?php  if (isset($_SESSION['username'])) : ?><!-- در اینجا هم اگر مقدار نام کاربری تعریف شده باشد و  وجود داشتنه باشد گزینه خروج فعال بشه و پیام موفقیا بیاد -->
-    	Welcome <strong><?php echo $_SESSION['username']; ?></strong> <!-- در اینجا چون شرط وجود کاربر هست  نام کابری رو چاپ بکن --> 
+    <p style="color: #000000;">Welcome<strong><?php echo $_SESSION['username']; ?></strong> </p><!-- در اینجا چون شرط وجود کاربر هست  نام کابری رو چاپ بکن --> 
     	<a href="index.php?logout='1'">logout</a>  <!--  8 ک در اینجا خروج کاربر برابر یک معلوم شده یعنی درس به منظور اینکه سشن خروج کاربر هست و در  خط  -->
     <?php endif ?>
 </div>
-		
+<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
  
